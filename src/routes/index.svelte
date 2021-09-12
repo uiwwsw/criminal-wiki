@@ -1,17 +1,10 @@
 <script>
-    import {criminal} from '$src/stores'
-// console.log(getStores,
-// navigating,
-// page,
-// session)
-console.log(criminal)
+    import {criminal} from '$src/stores/'
 </script>
 
-<svelte:head>
-	<title>Welcome</title>
-</svelte:head>
-<h1>블라블라</h1>
+<h1>{$criminal.a}</h1>
 <h2>dadawd</h2>
+<a href="/criminal/dd">ddd</a>
 
 <style lang="scss">
 	h1 {
