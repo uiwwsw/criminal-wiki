@@ -1,2 +1,2 @@
-import criminal from './criminal';
-export { criminal };
+import criminalStore from './criminal';
+export { criminalStore };

@@ -1,8 +1,8 @@
 <script>
-    import {criminal} from '$src/stores/'
+	import { criminalStore } from '$src/stores/';
 </script>
 
-<h1>{$criminal.a}</h1>
+<h1>{$criminalStore}</h1>
 <h2>dadawd</h2>
 <a href="/criminal/dd">ddd</a>
 
