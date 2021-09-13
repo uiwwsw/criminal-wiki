@@ -11,22 +11,24 @@
 		}
 
 		return {
-			status: 200,
+			status: 200
 		};
 	}
 </script>
 
 <script>
-    import criminalApi from '$src/apis/criminal'
-    import Head from '$src/components/head.svelte'
-    import {criminal} from '$src/stores'
-    export let article
-    $: b = article[0].b
+	import criminalApi from '$src/apis/criminal';
+	import Head from '$src/components/head.svelte';
+	import { criminalStore } from '$src/stores/';
+	// export let article;
+	// $: b = article[0].b;
 </script>
 
 <Head />
-<h1>{$criminal.a}</h1>
-<h2 on:click={criminal.in}>{b}</h2>
+<h1>{$criminalStore[0]?.id}</h1>
+<h2 on:click={criminalStore.add.bind(this, [{ id: '1', country: 'ko', address: 'ee', type: [1] }])}>
+	ddd
+</h2>
 
 <style lang="scss">
 	h1 {
