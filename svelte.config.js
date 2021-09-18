@@ -8,16 +8,14 @@ const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
 	preprocess: preprocess({
-    postcss: {
-      plugins: [
-        autoprefixer
-      ]
-    },
-    sass: {
-      sync: true,
-      implementation: sass,
-    },
-  }),
+		postcss: {
+			plugins: [autoprefixer]
+		},
+		sass: {
+			sync: true,
+			implementation: sass
+		}
+	}),
 
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
@@ -25,9 +23,10 @@ const config = {
 		vite: {
 			resolve: {
 				alias: {
-					$src: path.resolve('./src'),
+					$src: path.resolve('./src')
 				}
-			}
+			},
+			mode: process.env.MODE || 'development'
 		}
 	}
 };

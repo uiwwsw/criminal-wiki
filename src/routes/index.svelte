@@ -1,5 +1,10 @@
 <script>
+	import { onMount } from 'svelte';
 	import { criminalStore } from '$src/stores/';
+	import { MESSAGE } from '$lib/env';
+	onMount(() => {
+		console.log(MESSAGE);
+	});
 </script>
 
 <h1>ddd</h1>
