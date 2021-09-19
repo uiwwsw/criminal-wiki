@@ -1,9 +1,47 @@
 <script>
 	import { onMount } from 'svelte';
 	import { criminalStore } from '$src/stores/';
-	import { MESSAGE } from '$lib/env';
-	onMount(() => {
-		console.log(MESSAGE);
+	import Session from '$src/utils/session';
+
+	// const env = import.meta.env;
+	// console.log(Session, env, 'djakldja');
+	onMount(async () => {
+		Session.setItem({
+			key: 'theme',
+			value: 'blue'
+		});
+		const a = Session.getItem('fine');
+		console.log(a);
+		const b = Session.getItem('fine2');
+		console.log(b);
+		// console.log(2);
+		// Session.setItem({
+		// 	key: 'fine2',
+		// 	value: {
+		// 		a: 2,
+		// 		b: true
+		// 	}
+		// });
+		// Session.setItem({
+		// 	key: 'fine',
+		// 	value: 'ddddddd',
+		// 	expires: {
+		// 		value: 30,
+		// 		type: 'seconds'
+		// 	}
+		// });
+		// Session.setItem({
+		// 	key: 'fine2',
+		// 	value: {
+		// 		a: 2,
+		// 		b: true
+		// 	}
+		// });
+		// (() => {
+
+		// })();
+
+		return false;
 	});
 </script>
 
