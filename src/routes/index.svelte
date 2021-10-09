@@ -1,11 +1,15 @@
 <script>
 	import { onMount } from 'svelte';
-	import { criminalStore } from '$src/stores/';
+	import { themeStore } from '$src/stores/';
 	import Session from '$src/utils/session';
 
 	// const env = import.meta.env;
 	// console.log(Session, env, 'djakldja');
 	onMount(async () => {
+		const { firestore } = await import('$src/plugins/firebase');
+		console.log(firestore, 'dvdjkaldjlaw');
+		// themeStore.add('blue');
+
 		Session.setItem({
 			key: 'theme',
 			value: 'blue'
@@ -45,7 +49,7 @@
 	});
 </script>
 
-<h1>ddd</h1>
+<h1>{$themeStore}</h1>
 <h2>dadawd</h2>
 <input type="text" />
 <textarea name="" id="" cols="30" rows="10" />
