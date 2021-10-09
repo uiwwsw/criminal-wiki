@@ -1,38 +1,27 @@
-# create-svelte
+# CriminalWiki
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.9.
 
-## Creating a project
+## Development server
 
-If you're seeing this, you've probably already done this step. Congrats!
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+## Code scaffolding
 
-# create a new project in my-app
-npm init svelte@next my-app
-```
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-> Note: the `@next` is temporary
+## Build
 
-## Developing
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Running unit tests
 
-```bash
-npm run dev
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## Running end-to-end tests
 
-## Building
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
+## Further help
 
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
