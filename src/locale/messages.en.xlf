@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="1705878149327241801" datatype="html">
+        <source>안녕 다국어!</source>
+        <target>hello i18n!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">308</context>
+        </context-group>
+        <note priority="1" from="description">블라블라</note>
+        <note priority="1" from="meaning">다국어태스트</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

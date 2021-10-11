@@ -16,26 +16,37 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "locales": {
+          "en": "src/locale/messages.en.xlf",
+          "ko": "src/locale/messages.ko.xlf"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": true,
             "outputPath": "dist/criminal-wiki/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           },
           "configurations": {
+            "en-US": {
+              "localize": ["en-US"]
+            },
+            "en": {
+              "localize": ["en"]
+            },
+            "ko": {
+              "localize": ["ko"]
+            },
             "production": {
               "budgets": [
                 {
@@ -71,6 +82,15 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
+            "en-US": {
+              "browserTarget": "criminal-wiki:build:en-US"
+            },
+            "en": {
+              "browserTarget": "criminal-wiki:build:en"
+            },
+            "ko": {
+              "browserTarget": "criminal-wiki:build:ko"
+            },
             "production": {
               "browserTarget": "criminal-wiki:build:production"
             },
@@ -94,13 +114,8 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         },
@@ -147,9 +162,7 @@
         "prerender": {
           "builder": "@nguniversal/builders:prerender",
           "options": {
-            "routes": [
-              "/"
-            ]
+            "routes": ["/"]
           },
           "configurations": {
             "production": {
