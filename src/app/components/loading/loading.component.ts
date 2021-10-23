@@ -1,5 +1,5 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 
 @Component({
@@ -21,7 +21,6 @@ import { Subject } from 'rxjs';
 })
 export class LoadingComponent implements OnInit {
   @Input() loaded?: boolean;
-  @Output() setLoaded = new EventEmitter<boolean>();
   readonly errorTime = 10000;
   timer = 0;
   timer$: Subject<number> = new Subject();
@@ -32,7 +31,7 @@ export class LoadingComponent implements OnInit {
       },
       complete: () => {
         this.loaded = true;
-        this.setLoaded.emit(this.loaded);
+        // this.setLoaded.emit(this.loaded);
       },
     });
   }

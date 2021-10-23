@@ -15,6 +15,7 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 // import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { LoadingComponent } from './components/loading/loading.component';
+import { SelectComponent } from './components/select/select.component';
 // import { provideFunctions,getFunctions } from '@angular/fire/functions';
 // import { provideMessaging,getMessaging } from '@angular/fire/messaging';
 // import { providePerformance,getPerformance } from '@angular/fire/performance';
@@ -22,7 +23,7 @@ import { LoadingComponent } from './components/loading/loading.component';
 // import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
-  declarations: [AppComponent, LoadingComponent],
+  declarations: [AppComponent, LoadingComponent, SelectComponent],
   imports: [
     BrowserAnimationsModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
