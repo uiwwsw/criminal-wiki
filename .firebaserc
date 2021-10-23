@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "criminal-wiki": {
+      "hosting": {
+        "criminal-wiki": [
+          "criminal-wiki"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "criminal-wiki"
+  }
+}
