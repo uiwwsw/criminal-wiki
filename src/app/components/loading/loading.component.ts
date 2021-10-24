@@ -1,5 +1,5 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 
 @Component({
@@ -19,7 +19,7 @@ import { Subject } from 'rxjs';
     ]),
   ],
 })
-export class LoadingComponent implements OnInit {
+export class LoadingComponent implements OnInit, OnDestroy {
   @Input() loaded?: boolean;
   readonly errorTime = 10000;
   timer = 0;
@@ -34,6 +34,10 @@ export class LoadingComponent implements OnInit {
         // this.setLoaded.emit(this.loaded);
       },
     });
+  }
+
+  ngOnDestroy() {
+    this.timer$.unsubscribe();
   }
 
   ngOnInit(): void {

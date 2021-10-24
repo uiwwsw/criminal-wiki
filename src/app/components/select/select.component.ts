@@ -2,6 +2,7 @@ import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { MediaQueryService } from 'src/app/services/media-query.service';
 import { DEVICE } from 'src/app/services/media-query.model';
 import { SelectOption } from './select.componen.model';
+import { delay } from 'rxjs/operators';
 @Component({
   selector: 'app-select',
   templateUrl: './select.component.html',
@@ -24,7 +25,7 @@ export class SelectComponent implements OnInit {
   onBlur() {
     if (this.isDesktop && this.opend) this.opend = false;
   }
-  onOpen() {
+  onFocus() {
     if (this.isDesktop && !this.opend) this.opend = true;
   }
   onClick(value: string) {

@@ -1,15 +1,29 @@
-<div class="select" tabindex="0" (blur)="onBlur()">
-  <span class="select__front" (click)="onOpen()">{{ isSelected.key }}</span>
+<div class="select">
+  <span
+    class="select__front"
+    tabindex="0"
+    (focus)="onFocus()"
+    (click)="onFocus()"
+    >{{ isSelected.key }}</span
+  >
   <ul *ngIf="isDesktop && opend" class="select__option--wrap">
     <li
       *ngFor="let option of options"
+      tabindex="0"
       class="select__option"
       [class]="isSelected.value === option.value ? 'selected' : ''"
       (click)="onClick(option.value)"
+      (keyup.enter)="onClick(option.value)"
     >
       {{ option.key }}
     </li>
   </ul>
+  <i
+    *ngIf="isDesktop && opend"
+    class="select__layer"
+    tabindex="0"
+    (focus)="onBlur()"
+  ></i>
   <select
     *ngIf="isMobile"
     class="select__option--wrap"

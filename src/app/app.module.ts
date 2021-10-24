@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
+import { DebounceEventDirective } from './directives/debounce.directive';
+
 import {
   provideAnalytics,
   getAnalytics,
@@ -23,7 +25,12 @@ import { SelectComponent } from './components/select/select.component';
 // import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
-  declarations: [AppComponent, LoadingComponent, SelectComponent],
+  declarations: [
+    AppComponent,
+    LoadingComponent,
+    SelectComponent,
+    DebounceEventDirective,
+  ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
