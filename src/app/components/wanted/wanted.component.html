@@ -1,0 +1,9 @@
+<div class="wanted">
+  <img class="wanted__face" [src]="src" [alt]="isAlt" />
+  <dl class="wanted__info__wrap">
+    <dt class="wanted__info--title">{{ name }}</dt>
+    <dd class="wanted__info--desc" *ngFor="let info of infomations">
+      {{ info }}
+    </dd>
+  </dl>
+</div>

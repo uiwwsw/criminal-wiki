@@ -1,5 +1,14 @@
-<h1 i18n="dddd">안녕하세요.</h1>
-<app-select [options]="options" [value]="value"></app-select>
-<!-- <h2>{{ mediaQueryService.mediaQuery }}</h2> -->
+<header>
+  <h3 i18n="헤더에 타이틀">범죄자 위키</h3>
+  <h3>
+    <!-- <a routerLink="/first-component" routerLinkActive="active">First Component</a> -->
+  </h3>
+</header>
+<main>
+  <router-outlet></router-outlet>
+  <nav></nav>
+</main>
+<footer>
+  <cite>&copy;uiwwsw</cite>
+</footer>
 <app-loading></app-loading>
-<router-outlet></router-outlet>

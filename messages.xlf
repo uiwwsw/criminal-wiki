@@ -2,13 +2,20 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="ko-KR" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="1327184723122424453" datatype="html">
-        <source>안녕하세요.</source>
+      <trans-unit id="6031557265325470651" datatype="html">
+        <source>범죄자 위키</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">1</context>
+          <context context-type="linenumber">2</context>
         </context-group>
-        <note priority="1" from="description">dddd</note>
+        <note priority="1" from="description">헤더에 타이틀</note>
+      </trans-unit>
+      <trans-unit id="7695191322848032926" datatype="html">
+        <source><x id="PH" equiv-text="this.name"/> || <x id="PH_1" equiv-text="this.infomations[0]"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/wanted/wanted.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
       </trans-unit>
     </body>
   </file>

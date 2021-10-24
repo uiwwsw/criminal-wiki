@@ -1,0 +1,23 @@
+@import "./styles/variables";
+:host {
+  display: flex;
+  max-width: $root_max-width;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: auto;
+  header {
+    flex-basis: 60px;
+    padding: var(--padding-vertical) var(--padding-horizon);
+  }
+  main {
+    flex: 1;
+    padding: var(--padding-vertical) var(--padding-horizon);
+  }
+  footer {
+    padding: var(--padding-vertical) var(--padding-horizon);
+    flex-basis: 40px;
+    cite {
+      font-style: normal;
+    }
+  }
+}
