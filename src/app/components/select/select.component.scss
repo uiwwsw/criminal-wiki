@@ -1,4 +1,7 @@
+@import "../../styles/variables";
+
 $item-height: 30px;
+$border-radius: 5px;
 .select {
   position: relative;
   select {
@@ -14,8 +17,13 @@ $item-height: 30px;
     height: $item-height;
     padding: 5px 10px;
     line-height: $item-height;
-    border-radius: 5px;
+    border-radius: $border-radius;
     border: 1px solid #000;
+    &.opend {
+      @include desktop {
+        border-radius: $border-radius $border-radius 0 0;
+      }
+    }
   }
   &__layer {
     position: fixed;
@@ -38,9 +46,10 @@ $item-height: 30px;
       top: 100%;
       left: 0;
       right: 0;
-      margin: 0;
+      margin: -1px 0 0;
       padding: 0;
       border: 1px solid #000;
+      border-radius: 0 0 $border-radius $border-radius;
     }
   }
 }

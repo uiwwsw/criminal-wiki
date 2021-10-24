@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { DebounceEventDirective } from './directives/debounce.directive';
+import { KeyEventDirective } from './directives/key.directive';
 
 import {
   provideAnalytics,
@@ -30,6 +31,7 @@ import { SelectComponent } from './components/select/select.component';
     LoadingComponent,
     SelectComponent,
     DebounceEventDirective,
+    KeyEventDirective,
   ],
   imports: [
     BrowserAnimationsModule,

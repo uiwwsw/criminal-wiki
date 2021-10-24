@@ -1,7 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { Subject } from 'rxjs';
-
+import { Component } from '@angular/core';
+import { LoadingService } from 'src/app/services/loading.service';
 @Component({
   selector: 'app-loading',
   templateUrl: './loading.component.html',
@@ -19,35 +18,6 @@ import { Subject } from 'rxjs';
     ]),
   ],
 })
-export class LoadingComponent implements OnInit, OnDestroy {
-  @Input() loaded?: boolean;
-  readonly errorTime = 10000;
-  timer = 0;
-  timer$: Subject<number> = new Subject();
-  constructor() {
-    this.timer$.subscribe({
-      next: (timer) => {
-        this.timer = timer;
-      },
-      complete: () => {
-        this.loaded = true;
-        // this.setLoaded.emit(this.loaded);
-      },
-    });
-  }
-
-  ngOnDestroy() {
-    this.timer$.unsubscribe();
-  }
-
-  ngOnInit(): void {
-    let timer = 0;
-    const sti = setInterval(() => {
-      this.timer$.next(++timer);
-    }, 1000);
-    setTimeout(() => {
-      clearInterval(sti);
-      this.timer$.complete();
-    }, this.errorTime);
-  }
+export class LoadingComponent {
+  constructor(public loadingService: LoadingService) {}
 }

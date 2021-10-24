@@ -1,19 +1,22 @@
 <div class="select">
   <span
+    appKeyEvent
     class="select__front"
+    [class]="opend ? 'opend' : ''"
     tabindex="0"
-    (focus)="onFocus()"
     (click)="onFocus()"
+    [keyEvent]="['focus']"
     >{{ isSelected.key }}</span
   >
   <ul *ngIf="isDesktop && opend" class="select__option--wrap">
     <li
+      appKeyEvent
       *ngFor="let option of options"
       tabindex="0"
       class="select__option"
       [class]="isSelected.value === option.value ? 'selected' : ''"
       (click)="onClick(option.value)"
-      (keyup.enter)="onClick(option.value)"
+      [keyEvent]="['keyup.enter']"
     >
       {{ option.key }}
     </li>

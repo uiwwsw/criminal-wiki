@@ -7,7 +7,6 @@ import { MediaQueryService } from './services/media-query.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  loading = false;
   title = 'criminal-wiki';
   options = [
     { value: '1', key: '1' },
@@ -22,6 +21,5 @@ export class AppComponent implements OnInit {
   }
   ngOnInit() {
     this.onResize();
-    this.loading = true;
   }
 }
