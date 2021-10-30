@@ -33,7 +33,7 @@ export class SelectComponent implements OnInit {
     this.opend = false;
   }
   onChange(event: Event) {
-    const target = event.target as HTMLOptionElement;
+    const target = event.target as HTMLSelectElement;
     this.value = target.value;
   }
   ngOnInit(): void {}

@@ -18,5 +18,9 @@ export class WantedComponent implements OnInit {
     );
   }
 
+  get isSrc() {
+    return this.src || 'assets/images/components/wanted/no-img.png';
+  }
+
   ngOnInit(): void {}
 }
