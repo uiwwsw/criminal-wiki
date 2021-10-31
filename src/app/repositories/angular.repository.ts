@@ -4,7 +4,7 @@ import {
   collection,
   collectionData,
   CollectionReference,
-  docData,
+  query,
   where,
 } from '@angular/fire/firestore';
 import { WhereFilterOp } from 'firebase/firestore';
@@ -12,12 +12,14 @@ import { WhereFilterOp } from 'firebase/firestore';
 @Injectable({
   providedIn: 'root',
 })
-export class AngularService {
+export class AngularRepository {
   criminalsCollection: CollectionReference;
   constructor(firestore: Firestore) {
     this.criminalsCollection = collection(firestore, 'criminals');
   }
   getCriminal(key: string, op: WhereFilterOp, value: string) {
-    return collectionData(this.criminalsCollection);
+    return collectionData(
+      query(this.criminalsCollection, where(key, op, value))
+    );
   }
 }

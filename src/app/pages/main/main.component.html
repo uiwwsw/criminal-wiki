@@ -1,7 +1,7 @@
 똑같은 범죄를 저지르고 세상에서 아무렇지 않게 살아갑니다. 헌법상 그들의 신상을
 노출할 순 없지만, 누구나 쉽게 볼 수 있는 곳에 그들을 기록하고 잊어서는 안된다는
 생각을 합니다.
-<app-wanted [infomations]="mainViewModel.informations"></app-wanted>
-<li *ngFor="let item of mainViewModel.criminal$ | async">
-  <div *ngIf="item.name === 'dltkdgkssha'">{{ item.name }}</div>
-</li>
+<app-wanted
+  *ngFor="let item of mainViewModel.criminal$ | async"
+  [criminal]="item"
+></app-wanted>

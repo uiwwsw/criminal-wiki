@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Criminal } from 'src/app/models/criminal.model';
 
 @Component({
   selector: 'app-wanted',
@@ -6,20 +7,17 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./wanted.component.scss'],
 })
 export class WantedComponent implements OnInit {
-  @Input() src?: string;
-  @Input() name?: string;
-  @Input() infomations: string[] = [];
+  @Input() criminal!: Criminal;
   constructor() {}
   get isAlt() {
-    return (
-      this.name ||
-      this.infomations[0] ||
-      $localize`정보가 존재하지 않는 범죄자의 이미지`
-    );
+    return this.criminal.name || $localize`이름 모를 범죄자의 이미지`;
+  }
+  get isName() {
+    return this.criminal.name || $localize`아무개`;
   }
 
   get isSrc() {
-    return this.src || 'assets/images/components/wanted/no-img.png';
+    return this.criminal.src || 'assets/images/components/wanted/no-img.png';
   }
 
   ngOnInit(): void {}

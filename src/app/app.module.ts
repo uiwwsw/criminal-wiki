@@ -22,6 +22,7 @@ import { WantedComponent } from './components/wanted/wanted.component';
 import { MainComponent } from './pages/main/main.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import { EditorComponent } from './pages/editor/editor.component';
 // import { provideFunctions,getFunctions } from '@angular/fire/functions';
 // import { provideMessaging,getMessaging } from '@angular/fire/messaging';
 // import { providePerformance,getPerformance } from '@angular/fire/performance';
@@ -39,6 +40,7 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
     WantedComponent,
     SignInComponent,
     SignUpComponent,
+    EditorComponent,
   ],
   imports: [
     BrowserAnimationsModule,
