@@ -1,6 +1,5 @@
 <p>sign-in works!</p>
-<button (click)="authRepository.googleLogin()">dddd</button>
-<button (click)="authRepository.logout()">d11111ddd</button>
-<div>
-  {{ authRepository.auth.currentUser?.displayName }}
-</div>
+<button (click)="userViewModel.googleLogin()">dddd</button>
+<button (click)="userViewModel.logout()">d11111ddd</button>
+<div>{{ (userViewModel.user$ | async)?.displayName }}</div>
+<!-- <div>{{ (userViewModel.auth$ | async)?.currentUser?.displayName }}</div> -->

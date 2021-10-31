@@ -4,6 +4,7 @@ import { MainComponent } from './pages/main/main.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { EditorComponent } from './pages/editor/editor.component';
+
 export const routes: Routes = [
   {
     path: '',

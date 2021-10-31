@@ -1,21 +1,26 @@
 import { Injectable, OnDestroy } from '@angular/core';
 import {
   GoogleAuthProvider,
-  signInWithPopup,
   Auth,
+  user,
   User,
+  authInstance$,
+  signInWithPopup,
   signOut,
 } from '@angular/fire/auth';
-import { getAuth } from '@firebase/auth';
+import { getAuth } from 'firebase/auth';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
-export class AuthRepository {
+export class UserViewModel {
   private googleAuthProvider: GoogleAuthProvider;
-  private auth: Auth;
+  private auth!: Auth;
+  user$: Observable<User | null>;
   constructor() {
     this.auth = getAuth();
+    this.user$ = user(this.auth);
     this.googleAuthProvider = new GoogleAuthProvider();
   }
 
