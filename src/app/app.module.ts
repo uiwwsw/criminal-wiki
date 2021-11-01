@@ -23,6 +23,10 @@ import { MainComponent } from './pages/main/main.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { EditorComponent } from './pages/editor/editor.component';
+import { NavComponent } from './components/nav/nav.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BtnComponent } from './components/btn/btn.component';
+
 // import { provideFunctions,getFunctions } from '@angular/fire/functions';
 // import { provideMessaging,getMessaging } from '@angular/fire/messaging';
 // import { providePerformance,getPerformance } from '@angular/fire/performance';
@@ -41,8 +45,11 @@ import { EditorComponent } from './pages/editor/editor.component';
     SignInComponent,
     SignUpComponent,
     EditorComponent,
+    NavComponent,
+    BtnComponent,
   ],
   imports: [
+    FontAwesomeModule,
     BrowserAnimationsModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,

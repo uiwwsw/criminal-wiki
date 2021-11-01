@@ -1,0 +1,11 @@
+<button class="btn">
+  <i
+    class="btn__layer"
+    [@inOutAnimation]
+    *ngIf="clicked"
+    [ngStyle]="{ left: position.x + 'px', top: position.y + 'px' }"
+  ></i>
+  <div class="btn__content">
+    <ng-content></ng-content>
+  </div>
+</button>

@@ -1,0 +1,22 @@
+.btn {
+  position: relative;
+  overflow: hidden;
+  height: var(--control--height);
+  padding: 0 var(--control--padding-horizon);
+  border: 0;
+  border-radius: var(--border-radius);
+  text-align: center;
+  background: #fff;
+  &__content {
+    pointer-events: none;
+  }
+  &__layer {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    pointer-events: none;
+    background: var(--dim-color);
+  }
+}

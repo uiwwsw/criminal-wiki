@@ -1,0 +1,8 @@
+<app-btn (click)="setTest()">
+  <fa-icon [icon]="faBars"></fa-icon>
+</app-btn>
+<nav class="nav" [@inOutAnimation] *ngIf="test">
+  <app-btn class="nav__btn" (click)="setTest()">
+    <fa-icon [icon]="faSlash"></fa-icon>
+  </app-btn>
+</nav>

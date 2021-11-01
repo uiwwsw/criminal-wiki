@@ -4,8 +4,14 @@ html {
   --color: rgb(43, 43, 43);
   --padding-horizon: 10px;
   --padding-vertical: 5px;
+  --dim-color: rgb(234, 234, 234);
+  --border-radius: 12px;
   --font-family: Pretendard;
   --background: rgb(240, 255, 234);
+  --control--min-width: 300px;
+  --control--height: 60px;
+  --control--padding-horizon: 24px;
+  --control--padding-vertical: 10px;
 }
 body {
   margin: 0;
@@ -19,6 +25,11 @@ button,
 input,
 textarea {
   font: inherit;
+}
+.ng-fa-icon {
+  svg {
+    font-size: 30px;
+  }
 }
 @media (prefers-color-scheme: dark) {
   html {
